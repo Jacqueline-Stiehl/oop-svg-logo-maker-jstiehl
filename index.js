@@ -1,4 +1,3 @@
-//runs the application using imports from lib/
 const fs = require("fs");
 const inquirer = require("inquirer");
 const Circle = require("./lib/circle.js");
@@ -60,8 +59,3 @@ inquirer
       );
     }
   });
-
-//     fs.writeFile("logo.svg", circleObj.render(), (err) => {
-//       if (err) console.log(err);
-//     });
-//   });
