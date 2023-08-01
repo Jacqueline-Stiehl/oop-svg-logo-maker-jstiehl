@@ -37,27 +37,27 @@ inquirer
         response.text,
         response.textcolor
       );
-      fs.writeFile("logo.svg", circleObj.render(), (err) => {
-        if (err) console.log(err);
-      });
+      fs.writeFile("logo.svg", circleObj.render(), (err) =>
+        err ? console.error(err) : console.log("Generated logo.svg")
+      );
     } else if (response.logoshape === "square") {
       const squareObj = new Square(
         response.shapecolor,
         response.text,
         response.textcolor
       );
-      fs.writeFile("logo.svg", squareObj.render(), (err) => {
-        if (err) console.log(err);
-      });
+      fs.writeFile("logo.svg", squareObj.render(), (err) =>
+        err ? console.error(err) : console.log("Generated logo.svg")
+      );
     } else if (response.logoshape === "triangle") {
       const triangleObj = new Triangle(
         response.shapecolor,
         response.text,
         response.textcolor
       );
-      fs.writeFile("logo.svg", triangleObj.render(), (err) => {
-        if (err) console.log(err);
-      });
+      fs.writeFile("logo.svg", triangleObj.render(), (err) =>
+        err ? console.error(err) : console.log("Generated logo.svg")
+      );
     }
   });
 
