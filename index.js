@@ -8,8 +8,11 @@ inquirer
   .prompt([
     {
       type: "input",
-      message: "Please select three characters for your logo.",
+      message: "Please select up to three characters for your logo.",
       name: "text",
+      validate: function (data) {
+        return data.length <= 3;
+      },
     },
     {
       type: "input",
